@@ -18,4 +18,8 @@ def students_view(request):
         'Алексей',
     ]
 
-    return render(request, 'level_1/students.html', context={'students': students})
+    return render(
+        request,
+        'level_1/students.html',
+        context={'students': students},
+        )

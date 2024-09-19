@@ -15,11 +15,16 @@ from django.shortcuts import render
 
 
 def about_us_view(request):
+    title = 'История компании'
     company_name = 'Learn Python'
     work_from_year = 2013
 
     return render(
         request,
         'level_1/about_us.html',
-        context={'company_name': company_name, 'work_from_year': work_from_year},
+        context={
+            'title': title,
+            'company_name': company_name,
+            'work_from_year': work_from_year,
+            },
     )
