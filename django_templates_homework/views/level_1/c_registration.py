@@ -1,3 +1,4 @@
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 
 
@@ -12,7 +13,11 @@ from django.shortcuts import render
 """
 
 
-def registration_view(request):
+def registration_view(request: HttpRequest) -> HttpResponse:
     title = 'Регистрация'
 
-    return render(request, 'level_1/registration.html')  # код писать тут
+    return render(
+        request,
+        'level_1/registration.html',
+        context={'title': title},
+        )

@@ -1,3 +1,4 @@
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 
 
@@ -10,5 +11,5 @@ from django.shortcuts import render
 """
 
 
-def contacts_info_view(request):
+def contacts_info_view(request: HttpRequest) -> HttpResponse:
     return render(request, 'level_1/contacts_info.html')
